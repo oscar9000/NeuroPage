@@ -4,16 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             const lista = document.getElementById("lista");
             data.forEach(item => {
-                let li = document.createElement("li");
-                li.innerHTML = `<a href="#" onclick="mostrarDetalle(${item.id})">${item.nombre}</a>`;
-                lista.appendChild(li);
+                let option = document.createElement("option");
+                option.value = item.id;
+                option.textContent = item.nombre;
+                lista.appendChild(option);
             });
-            window.data = data; // Guarda los datos en una variable global
         });
 });
 
-function mostrarDetalle(id) {
-    let item = window.data.find(elemento => elemento.id === id);
-    document.getElementById("titulo").innerText = item.nombre;
-    document.getElementById("descripcion").innerText = item.descripcion;
+function irADetalle() {
+    const seleccion = document.getElementById("lista").value;
+    if (seleccion) {
+        window.location.href = `detalle.html?id=${seleccion}`;
+    } else {
+        alert("Por favor, selecciona un elemento.");
+    }
 }
