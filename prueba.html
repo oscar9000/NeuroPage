@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sites Script</title>
+    <script>
+        function cambiarTitulo() {
+            document.title = "¡Nuevo Título en Google Sites!";
+            document.getElementById("mensaje").innerText = "Título cambiado exitosamente.";
+        }
+    </script>
+</head>
+<body>
+    <h2 id="mensaje">Haz clic en el botón para cambiar el título.</h2>
+    <button onclick="cambiarTitulo()">Cambiar Título</button>
+</body>
+</html>
