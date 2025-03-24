@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selecciona un Elemento</title>
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Selecciona un elemento</h1>
-    
-    <!-- Menú desplegable -->
-    <select id="lista">
-        <option value="">-- Selecciona un elemento --</option>
-    </select>
-
-    <!-- Botón para ir a la página de detalles -->
-    <button onclick="irADetalle()">Ver Detalles</button>
+    <div class="contenedor">
+        <h1>Selecciona un elemento</h1>
+        <select id="lista">
+            <option value="">-- Selecciona un elemento --</option>
+        </select>
+        <button onclick="irADetalle()">Ver Detalles</button>
+    </div>
 </body>
 </html>
+
